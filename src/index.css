@@ -1,0 +1,54 @@
+/* K-VIBES Design System — mirrors app_colors.dart & app_theme.dart */
+:root{
+  --pink:#E91E8C;
+  --pink-400:#FF6BB5;
+  --pink-300:#FF9ECF;
+  --pink-100:#FCE4F3;
+  --pink-50:#FFF0F9;
+  --dark:#1A1A2E;
+  --dark-2:#2D1B4E;
+  --dark-3:#3D1060;
+  --violet:#8B5CF6;
+  --surface:#F8F7FB;
+  --surface-card:#FFFFFF;
+  --surface-muted:#F3F0F7;
+  --outline:#E9E0F0;
+  --outline-soft:#F0E6F5;
+  --text:#1A1A2E;
+  --text-sec:#6B6B7B;
+  --text-ter:#9E9EAE;
+  --radius-xl:32px;
+  --radius-lg:28px;
+  --radius-md:20px;
+  --radius-sm:14px;
+  --shadow-soft:0 4px 16px rgba(0,0,0,.04), 0 8px 24px rgba(233,30,140,.06);
+  --shadow-card:0 4px 12px rgba(0,0,0,.05), 0 4px 20px rgba(233,30,140,.05);
+  --shadow-pink:0 6px 16px rgba(233,30,140,.35);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scrollbar-width:thin; scrollbar-color:var(--pink) transparent}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  color:var(--text);
+  background:var(--surface);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+a{color:inherit; text-decoration:none}
+img{max-width:100%; display:block}
+button{font:inherit}
+
+/* scroll bar */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-thumb{background:var(--pink); border-radius:999px}
+::-webkit-scrollbar-track{background:transparent}
+
+/* utilities */
+.container{width:min(1120px,92vw); margin-inline:auto}
+.accent{color:var(--pink)}
+.gradient-text{
+  background:linear-gradient(135deg,var(--pink) 0%, #FF6BB5 45%, var(--violet) 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}

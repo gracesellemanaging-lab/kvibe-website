@@ -7,10 +7,13 @@ import {
   IconList, IconCheck, IconCheckCircle, IconArrowRight, IconCopy, IconGithub, IconDisc, IconWaves
 } from './components/Icons.jsx'
 
+const BASE = import.meta.env.BASE_URL
 const APK_URL_GITHUB = 'https://github.com/gracesellemanaging-lab/K-Vibes/raw/main/K-vibes.apk'
-const APK_URL_LOCAL = '/K-vibes.apk'
+const APK_URL_LOCAL = `${BASE}K-vibes.apk`
 const APK_URL_RELEASE = 'https://github.com/gracesellemanaging-lab/K-Vibes/releases/tag/v1.0.0'
 const GITHUB_REPO = 'https://github.com/gracesellemanaging-lab/K-Vibes'
+const LOGO_URL = `${BASE}logo.png`
+const ICON_URL = `${BASE}icon.png`
 
 function useReveal(){
   useEffect(()=>{
@@ -65,7 +68,7 @@ export default function App(){
       <nav className="nav">
         <div className="container nav-inner">
           <a href="#" className="brand" aria-label="K-VIBES home">
-            <span className="brand-mark"><img src="/logo.png" alt="K-VIBES logo" onError={e=>e.currentTarget.style.display='none'} /></span>
+            <span className="brand-mark"><img src={LOGO_URL} alt="K-VIBES logo" onError={e=>e.currentTarget.style.display='none'} /></span>
             <span className="brand-name">K-<span>VIBES</span></span>
             <span className="badge-live" style={{marginLeft:6}}><span className="badge-dot"/> v1.0.0</span>
           </a>
@@ -130,7 +133,7 @@ export default function App(){
               <div className="phone-screen">
                 <div className="phone-status"><span>9:41</span><span className="status-dots"><span/><span/><span/> <IconWaves width={14} height={14} style={{marginLeft:4}}/></span></div>
                 <div className="mini-hero">
-                  <span className="mini-hero-icon"><img src="/logo.png" alt="" onError={e=>e.currentTarget.style.display='none'} /></span>
+                  <span className="mini-hero-icon"><img src={LOGO_URL} alt="" onError={e=>e.currentTarget.style.display='none'} /></span>
                   <div>
                     <div style={{fontWeight:900, fontSize:13, lineHeight:1}}>K-VIBES</div>
                     <div style={{fontSize:11, opacity:.8}}>Your K-Pop universe</div>
@@ -309,7 +312,7 @@ export default function App(){
 
             <div className="cta-card">
               <div className="cta-card-head">
-                <span className="cta-icon"><img src="/icon.png" alt="" onError={e=>e.currentTarget.style.display='none'} /></span>
+                <span className="cta-icon"><img src={ICON_URL} alt="" onError={e=>e.currentTarget.style.display='none'} /></span>
                 <div>
                   <strong>K-vibes.apk</strong>
                   <span className="cta-meta"><IconPackage width={12} height={12}/> 94.7 MB • Android 6+ • Offline-first</span>
@@ -360,7 +363,7 @@ export default function App(){
       <footer className="footer">
         <div className="container footer-grid">
           <div className="footer-brand">
-            <span className="brand-mark" style={{width:36, height:36}}><img src="/logo.png" alt="" onError={e=>e.currentTarget.style.display='none'} /></span>
+            <span className="brand-mark" style={{width:36, height:36}}><img src={LOGO_URL} alt="" onError={e=>e.currentTarget.style.display='none'} /></span>
             <div>
               K-VIBES <small>© {new Date().getFullYear()} gracesellemanaging-lab • Your K-Pop universe</small>
             </div>

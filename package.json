@@ -1,7 +1,7 @@
 {
   "name": "kvibes-website",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "K-VIBES official website - Your K-Pop universe. React + Vite landing with direct APK download.",
   "type": "module",
   "scripts": {

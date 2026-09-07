@@ -9,8 +9,8 @@ import {
 
 const BASE = import.meta.env.BASE_URL
 const APK_URL_GITHUB = 'https://github.com/gracesellemanaging-lab/K-Vibes/raw/main/K-vibes.apk'
-const APK_URL_LOCAL = `${BASE}K-vibes.apk`
-const APK_URL_RELEASE = 'https://github.com/gracesellemanaging-lab/K-Vibes/releases/tag/v1.0.0'
+const APK_URL_LOCAL = 'https://github.com/gracesellemanaging-lab/K-Vibes/raw/main/K-vibes.apk'
+const APK_URL_RELEASE = 'https://github.com/gracesellemanaging-lab/K-Vibes/releases/download/v1.0.1/K-vibes.apk'
 const GITHUB_REPO = 'https://github.com/gracesellemanaging-lab/K-Vibes'
 const LOGO_URL = `${BASE}logo.png`
 const ICON_URL = `${BASE}icon.png`
@@ -70,7 +70,7 @@ export default function App(){
           <a href="#" className="brand" aria-label="K-VIBES home">
             <span className="brand-mark"><img src={LOGO_URL} alt="K-VIBES logo" onError={e=>e.currentTarget.style.display='none'} /></span>
             <span className="brand-name">K-<span>VIBES</span></span>
-            <span className="badge-live" style={{marginLeft:6}}><span className="badge-dot"/> v1.0.0</span>
+            <span className="badge-live" style={{marginLeft:6}}><span className="badge-dot"/> v1.0.1</span>
           </a>
 
           <div className={`nav-links ${menuOpen?'open':''}`}>
@@ -107,7 +107,7 @@ export default function App(){
             <div className="hero-actions reveal" data-delay="240">
               <button className="btn-primary" onClick={()=>handleDownload()}>
                 <IconDownload width={18} height={18}/> Download K-VIBES APK
-                <span className="btn-badge">94 MB</span>
+                <span className="btn-badge">80 MB</span>
               </button>
               <a href={GITHUB_REPO} target="_blank" rel="noreferrer" className="btn-ghost">
                 <IconStar width={16} height={16}/> View on GitHub
@@ -116,7 +116,7 @@ export default function App(){
 
             <div className="hero-meta reveal" data-delay="320">
               <span className="meta-pill"><IconSmartphone width={14} height={14}/> Android 6+</span>
-              <span className="meta-pill"><IconPackage width={14} height={14}/> 94 MB • v1.0.0</span>
+              <span className="meta-pill"><IconPackage width={14} height={14}/> 80 MB • v1.0.1</span>
               <span className="meta-pill"><IconShield width={14} height={14}/> No data collected</span>
               <button onClick={copyLink} className="meta-pill meta-pill-btn"><IconCopy width={13} height={13}/> Copy link</button>
             </div>
@@ -191,7 +191,7 @@ export default function App(){
       {/* STATS */}
       <div className="container stats reveal">
         <div className="stats-grid">
-          <div className="stat"><strong>94 MB</strong><span>APK size</span></div>
+          <div className="stat"><strong>80 MB</strong><span>APK size</span></div>
           <div className="stat"><strong>Android 6+</strong><span>Works everywhere</span></div>
           <div className="stat"><strong>100% Offline</strong><span>No internet needed</span></div>
           <div className="stat"><strong>Free</strong><span>No ads • No login</span></div>
@@ -275,7 +275,7 @@ export default function App(){
           </div>
           <div className="steps">
             {[
-              {n:1, title:'Download the APK', desc:<>Tap the pink download button. File is <b>94 MB</b> — works on Android 6 and above.</>, icon: IconDownload},
+              {n:1, title:'Download the APK', desc:<>Tap the pink download button. File is <b>80 MB</b> — works on Android 6 and above.</>, icon: IconDownload},
               {n:2, title:'Allow install', desc:<>Open the file → Allow <b>“Install unknown apps”</b> for your browser when prompted.</>, icon: IconShield},
               {n:3, title:'Open & play', desc:<>Launch K-VIBES → grant music permission → your library appears instantly.</>, icon: IconMusic},
             ].map((s,i)=>(
@@ -303,11 +303,11 @@ export default function App(){
               <p>Free forever. No account. No ads. Just your music, beautifully organized. Perfect for commutes, flights, and late-night sessions.</p>
               <div className="cta-actions">
                 <button className="btn-primary btn-primary-light" onClick={()=>handleDownload()}>
-                  <IconDownload width={18} height={18}/> Download APK — 94 MB
+                  <IconDownload width={18} height={18}/> Download APK — 80 MB
                 </button>
                 <a href={APK_URL_RELEASE} target="_blank" rel="noreferrer" className="btn-ghost">View Release <IconArrowRight width={14} height={14}/></a>
               </div>
-              <p className="cta-footnote">Verified build from GitHub Actions • v1.0.0+1 • <a href={GITHUB_REPO} target="_blank" rel="noreferrer">Source on GitHub <IconExternal width={10} height={10}/></a></p>
+              <p className="cta-footnote">Verified build from GitHub Actions • v1.0.1 • <a href={GITHUB_REPO} target="_blank" rel="noreferrer">Source on GitHub <IconExternal width={10} height={10}/></a></p>
             </div>
 
             <div className="cta-card">
@@ -315,7 +315,7 @@ export default function App(){
                 <span className="cta-icon"><img src={ICON_URL} alt="" onError={e=>e.currentTarget.style.display='none'} /></span>
                 <div>
                   <strong>K-vibes.apk</strong>
-                  <span className="cta-meta"><IconPackage width={12} height={12}/> 94.7 MB • Android 6+ • Offline-first</span>
+                  <span className="cta-meta"><IconPackage width={12} height={12}/> 80 MB • Android 6+ • Offline-first</span>
                 </div>
                 <span className="badge-live"><span className="badge-dot"/> FREE</span>
               </div>
@@ -345,7 +345,7 @@ export default function App(){
               {q:'Is K-VIBES really offline?', a:'Yes — 100%. It scans and plays audio already on your phone. No streaming, no internet required after install. Perfect for airplane mode.'},
               {q:'Is it free? Any ads or login?', a:'Completely free, no ads, no account. Open the app and your music is there.'},
               {q:'Why APK and not Play Store?', a:'We’re launching direct-download first for speed. Play Store is planned. APK installs in seconds — just allow “Install unknown apps” once.'},
-              {q:'What Android version do I need?', a:'Android 6.0 (Marshmallow) and above. That covers ~99% of devices. File size is 94 MB.'},
+              {q:'What Android version do I need?', a:'Android 6.0 (Marshmallow) and above. That covers ~99% of devices. File size is 80 MB.'},
               {q:'Where does it get music from?', a:'From your device storage (Downloads, Music folders). Grant the media permission on first launch and we’ll index everything automatically.'},
               {q:'Is my data safe?', a:'Yes. No servers, no tracking. Everything (likes, playlists) is stored locally in SQLite on your phone.'},
             ].map((f,i)=>(
